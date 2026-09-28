@@ -1,0 +1,271 @@
+{
+  "generated_from": "https://github.com/SuperInstance/qthe/blob/43d741b3a359d593da1a5e9e80575204a499d217/qthe.mjs",
+  "generated_at": "2026-09-28",
+  "cases": [
+    {
+      "id": "prng-01",
+      "description": "16x16, wormholes ON, default sigma, 8 ticks",
+      "seed": { "kind": "prng", "w": 16, "h": 16, "value": 1 },
+      "ticks": 8,
+      "wormholes": true,
+      "sigma": 1.584962500721156,
+      "expected_trace_hash": "ef551163e447fce301a5fd6f6416d42cec41f3d428526b8f386a8ab7980829c6",
+      "tick_hashes": [
+        "be0c3a740455015c38a2943eb1d511501f674c8272eeb1fccd350651ab2270d0",
+        "4953e6339d7f23149fc47268547c6fbe345d86ca0cb019a0d3a97d6c2ac3c9ec",
+        "94a673765358f6c73d1bad87fd658ade069984619e5d8e2993b9d0fc641267ca",
+        "bb94e47fa4c5ab4e29433ff6bf9236c18d26732a370f31025fb687db757dcbc4",
+        "f3f6fffb724a25f3f0815a0744968869a9d904159dfa4f8fc631b225653e2056",
+        "505a44dc2ba2dc2fa5a8179c21525bb25f2abdd0135bed209098b8ad6c0d52de",
+        "957031782e7a3604feb149944524560ade459468481221ac47911a2376e49c2a",
+        "83504efb472691af8d3bbf0a9e428d6de618c376837b7b51280766e8fd9907fd",
+        "ef551163e447fce301a5fd6f6416d42cec41f3d428526b8f386a8ab7980829c6"
+      ]
+    },
+    {
+      "id": "prng-02",
+      "description": "16x16, wormholes OFF (paired arm of prng-01)",
+      "seed": { "kind": "prng", "w": 16, "h": 16, "value": 1 },
+      "ticks": 8,
+      "wormholes": false,
+      "sigma": 1.584962500721156,
+      "expected_trace_hash": "cd215366ee4ba5f02e738680c51fc29da5c70ffdfd25cc01a51b08b01d3f59d4",
+      "tick_hashes": [
+        "be0c3a740455015c38a2943eb1d511501f674c8272eeb1fccd350651ab2270d0",
+        "fb6dcd90dcb48a9b8e9b81759fd52ebc9fc98e6ccd07132fefc278d6a2220d11",
+        "6ed40bb36cdd51620d8538798b9ac14198c30402525ff3f4d9841d5659e58b3b",
+        "9ceb761aefe2ac941e3e838187c819b659f7f0949468be76440dcf8ac0c1a4c6",
+        "479ee712413482bfe1b3172579788648aa2ad0486490ee9897ab1566a9b38b8f",
+        "7f36bd8834e7901a8f47b3784131849c44ee91df489a5a30a317e8f85468dc7c",
+        "7bca91d1e5606eaef17a3f462c6ec752ac0dcda8f963e40c8e05a3847ffd66ff",
+        "5ed6b68d59e1e73f8b0d9bf6891edc725e52c2916992cd5d39eaea6b5b8964fe",
+        "cd215366ee4ba5f02e738680c51fc29da5c70ffdfd25cc01a51b08b01d3f59d4"
+      ]
+    },
+    {
+      "id": "prng-03",
+      "description": "24x12 wide grid, wormholes ON, 12 ticks",
+      "seed": { "kind": "prng", "w": 24, "h": 12, "value": 7 },
+      "ticks": 12,
+      "wormholes": true,
+      "sigma": 1.584962500721156,
+      "expected_trace_hash": "92c72d8ebca8b069b3d0a8c2fd728a5600aea0e70449e220c45b06b00a98c130",
+      "tick_hashes": [
+        "d30aa67b521adb4d06f644de171376d59dfbef92287a7e0bbe0e2a5f8cd51798",
+        "d565859e9df6d26b353b69da7bab01d97e5a877650bcf907f0da69c79aa00fec",
+        "89cbc761d142f560d2fe0bc9d2de102ec1de7063afaab953df43fffd3424888b",
+        "919ab3e415173bddff73a2f1d6e851957499d00e212843d6f4d33b128e6479a6",
+        "a50cd3085f908d300fc2a2a621a595cc898b34ec0035d4837f2da1cc20643edd",
+        "31acce06c894439b899e6182746795a1b80a620a381b08fe4f070e6a23d040cf",
+        "bcdafad16ed36aef3d389ad38d6af4edbfdbe4d701e36315e71036205e561bbb",
+        "b49cda75d13a229c3326e767baf510da221b4b16ad43157af4d79f186e21d691",
+        "93e6a99862aabbd9a44a0f9df28c176c456345a0f5d0e8547dae17c3c73e7178",
+        "2471f9947db05c68ed37c0bf6462679279ad591c61432015f4508feb81eda245",
+        "5c76b8e81425c45dbc0cf74dbd5a6a9d2cf5552ee7523dbf0f8b4503c32a04b3",
+        "d6ab3ebd1f11a6ea55b1cbd6d54d3c63f5f251e14bfd0eab5bbea7ebf1a02151",
+        "92c72d8ebca8b069b3d0a8c2fd728a5600aea0e70449e220c45b06b00a98c130"
+      ]
+    },
+    {
+      "id": "prng-04",
+      "description": "12x24 tall grid, different seed, wormholes ON, 12 ticks",
+      "seed": { "kind": "prng", "w": 12, "h": 24, "value": 42 },
+      "ticks": 12,
+      "wormholes": true,
+      "sigma": 1.584962500721156,
+      "expected_trace_hash": "1b28bc7b4e042ea39c29fbd5e5ddbf5c703534630d592e0b1f33438cd319751e",
+      "tick_hashes": [
+        "3ec30e37fc34dea344875d2c600d5ce2b8e078504683e514033a3a4e8faee053",
+        "e4998d564545a0b039860faa90d37f679399fb0e5837bf74b6252b2a7c7767a1",
+        "ec6643be7ad49b36ebf8a8dea1a20e7c3b08f32026b6b8a5595dde6b9a943efa",
+        "eb5c9e9f2d7cd771e48baf1155dfbeebfece589db3f33c4db90a48e77c19bc76",
+        "465f202278f533e6b8661e5b84db0bbd59fddead5152af26f780dfd6a07e8f99",
+        "6d550b2bb3e780b66cae1d6a1c7aed558b8eb3d09bf4602506cbe40660520c2a",
+        "ff9bc305f7a9685007b0cb7ff7df00b6b42dbcb6b1f34abffbb86385dd3ea474",
+        "f6cbfbbdb23b462e40a154395f1d670b2cd07df5ba32ca778b080a086d99084d",
+        "4cd4d4b6acfb37e8d5fdc75e64f3535aa94ab6b4a9f3324b2626bd7bc5764728",
+        "7daf515698fdea74a9741cc3ec3e938704a64a62a124c807382f578793a49af7",
+        "86655919171c5f231555e9f7e5c53e9eefadac415ec6f7ad1a984fa1d9ad5e1d",
+        "7cef993a3f02673015358627d8d301773090545f0ec518f48f2ec2e7e3dc77a1",
+        "1b28bc7b4e042ea39c29fbd5e5ddbf5c703534630d592e0b1f33438cd319751e"
+      ]
+    },
+    {
+      "id": "prng-05",
+      "description": "8x8 minimal grid, wormholes ON, 20 ticks (long run, small state)",
+      "seed": { "kind": "prng", "w": 8, "h": 8, "value": 99 },
+      "ticks": 20,
+      "wormholes": true,
+      "sigma": 1.584962500721156,
+      "expected_trace_hash": "170ebb4444c687ae2be72603acb5e81a395049bfddff98c2449d115230e7fca7",
+      "tick_hashes": [
+        "26834c9044bd7ea07fb7a9536ecaa1a65eb78846c09a071516be962888e6cb6b",
+        "aef14edb416478820604775c39c18f51bea0e98867610199f32b2926edf030a8",
+        "adb9a46141a9d7461f72679bf160ddcabb49e949fa7d9ab56a907da72466da6c",
+        "57a17d3c1fc63e6b5bb0c8ec09105d62b410f3ce32e17bbcdc040a2f87a7ea65",
+        "f63ed4c9107fbf8616677abfb37b9fc2e5b71952968ca7e14bc057f4535aa893",
+        "acc3d0bb9761bc2339390557e7f91da374ce53478c6459ed68cb7992c4141739",
+        "2f837ed4e11a084e3c6c5b24b1cfe698a0abec7337228556015f99fd03dc49c3",
+        "60570ab003deb945c63f23e6e52786300c1fc94d149af622859d657040ee917a",
+        "a6efbe15545df9984de4d162682b2a3d78b2eab1f50688d078108f44b751e035",
+        "fe4d8096638c9ff1364e50a431a185b3bacdabf8bb918de48da515ea05006471",
+        "8a3f11727157b8c8b78bca12e64a0f743b96d212b348141e4766948e5c7b8654",
+        "eee676e3e25ff4b42115769c6e104fe375b9b856aebb5d27a24cb5e3658165a1",
+        "fb50be73a20ba066ac0fa9627db3f8453be92ea4c788db4a1662b5c4be3ae60a",
+        "ada76d83105008221571c5e578d94c2f9173256a3e87aaa1a2b3294f4b142e7b",
+        "beef6ea2050ea7745e0ab979a5a0405fa236e73e9095416cd39529c267fade5a",
+        "4e55fe130b789c69bbd42c8b1c0d901fbcb2665c56c8b86af99b28a25fc899e3",
+        "a38c7995488633c967aa6e634e5a160149d0e0b5e23ac2b4c46529293252164a",
+        "17e561872307452d88d7eea13fbccb14ec45b27e408dea77423f64616d855bcb",
+        "f990172d874203f6e03836d8fd702c69431d67df1a6b19c6e10930a0205f5e1e",
+        "1d71cea59dc5ed6484945ced62409c941a2e6c015b824f4fb24aaa2804ef63bb",
+        "170ebb4444c687ae2be72603acb5e81a395049bfddff98c2449d115230e7fca7"
+      ]
+    },
+    {
+      "id": "prng-06",
+      "description": "20x20, wormholes ON, sigma=0.5 (off the C3 default)",
+      "seed": { "kind": "prng", "w": 20, "h": 20, "value": 314 },
+      "ticks": 10,
+      "wormholes": true,
+      "sigma": 0.5,
+      "expected_trace_hash": "8eee8f7c47fac998ef24c2bf6427352d9cfc6712b2deb1eadcc509c85cec6be7",
+      "tick_hashes": [
+        "a23ec3c9badfff4835d42b8af90eb38cd284a6c20e8fa4dd58fe87cc96217765",
+        "ce806ee8a692bbb4b4480f08988f08c07e97e9cba8908ae595e8d3b791ed08ab",
+        "da478e12ed5f0368d6de586f1f5c72c41cbe35fd2debc9186b3ae3d2a0cf650d",
+        "6eda9b217aa97b21ed692532ceb37020fb86d3ace0f6b07ce6c140947bfb702f",
+        "2d176ec5ea8158772ea1db24e50c6b3859ced99a75a2f52854ecb34dbc27e10d",
+        "e74da8d9ace5beaf1a12e857770163ee7c45e4973645d900a857fdff1f2594fa",
+        "79f8088bafe2d7eac04e34acbd0ef427aff1a2a4d7389b2ed75a3c2b00648833",
+        "2cddc25f8806cb4f7cf4b71af187e77252b82a73c29bb1a1ac161ef8df892667",
+        "602e5dd72573b879e470598258cc1ccadedde937858d48fdbf262ab45f8a48c9",
+        "17c422072ba481330b04ae565ac1acf70d1e463db54fedb49f7dc08e0bb4c62f",
+        "8eee8f7c47fac998ef24c2bf6427352d9cfc6712b2deb1eadcc509c85cec6be7"
+      ]
+    },
+    {
+      "id": "prng-07",
+      "description": "20x20, same seed as prng-06, sigma=2 (C3 sweep point)",
+      "seed": { "kind": "prng", "w": 20, "h": 20, "value": 314 },
+      "ticks": 10,
+      "wormholes": true,
+      "sigma": 2,
+      "expected_trace_hash": "f7d8a11d81ac9f48ede446eecba3250b312a917c85d92f1ac06b36d124cff1e8",
+      "tick_hashes": [
+        "a23ec3c9badfff4835d42b8af90eb38cd284a6c20e8fa4dd58fe87cc96217765",
+        "bdd5d6f812343e878f5eeb9d4801b5467176b278706a7c2106b615a817775a14",
+        "e14c125437b07d0c04ae14b544ecd10cf5310443014a7f5326518ce27fd594bf",
+        "17a0f1cbe2a29072c5d7e9d21e41ed982f368689909ba8f7fb418be534c0b727",
+        "51b11c12cef8a32d6dcf4a5ea28b45af04b6162789a49a8da8353f00a3bf593d",
+        "218a453232c6440dcba80e3e7eec8bbe276453fb184db79b67354450c8c9db42",
+        "2fe56371726b25585dee8292d0dc7b7882d1e5e6f5225aaf1bedc419139fa046",
+        "04d72927b95ee1dbd310deced6316722e1cd23e6fe69ef4e28da8db7f9b60e98",
+        "7a9a82fbb61357725eadcd0959d64a83225bea177376ba0d9ef9a3dd88c5f9ec",
+        "e494c93edee168c357d9f991283ab311eb7e66d7b1dd493d590cb8613df31ecb",
+        "f7d8a11d81ac9f48ede446eecba3250b312a917c85d92f1ac06b36d124cff1e8"
+      ]
+    },
+    {
+      "id": "prng-08",
+      "description": "30x30 larger grid, wormholes ON, 15 ticks",
+      "seed": { "kind": "prng", "w": 30, "h": 30, "value": 2026 },
+      "ticks": 15,
+      "wormholes": true,
+      "sigma": 1.584962500721156,
+      "expected_trace_hash": "05f78dd98f3804b8f0725c003bd96435cf12612e4f92cd43dd36e6540f26bb9b",
+      "tick_hashes": [
+        "5d660281675079a8b4eee1557210a7db2ddbe2962b43b9a806c6d46db75ae1b1",
+        "940258927f33f5a5c6f2098be55bb579fdfe92317421b72a2514bf2c2f6f26e0",
+        "ef023d16f1a90ce5876852b06a2f97f3673c1e140327e8df2cd2d088799d1fcd",
+        "326c81663eb2ed99f6889f831a152510a7854d73b32ebd707b957486f75b6abf",
+        "0e16b2d39375880a36d958fb317bc32e3c3cd0cb551e1dfd85cb65880918cfb3",
+        "daf49708b004a340d983a42c344984c77deda3ac1ca57974b648c11a83210975",
+        "3657d0c0a1d1305edf8ef65f33b13a3e034f5f80d761170f497c08c8b5111a9d",
+        "cd9d7f97c2e0fb17174ae9d38de54577841c81fc5ffd991227d9748a95cec7ae",
+        "12682349b39a643147f7fef634bc81f35c0a8afb317989b766373b06057dacf9",
+        "ff2f5da41726285d81ee759d08149c538ab33dbe2a7b3f14d74eb1b27d5b80d0",
+        "4299492aa7ea849f4d8915ea44285a36ce2154b4c96b03a96334516c23b9cc96",
+        "29ade86a5bc5a44b10eede0204ea8ffd6745659b41a9bacdb7b800f903007eaf",
+        "7354604c9eecc02061d311e06a99efae6ca4fedd772b7056cd7de601538cbbbc",
+        "67d9cbca273f0bbdd23514affabe57c906498ce13bc7ac4881d170e7f0b009f5",
+        "cad04290679d66d00c448d9fd9f832814815d64cda05afd28d7ce01cd042a4f0",
+        "05f78dd98f3804b8f0725c003bd96435cf12612e4f92cd43dd36e6540f26bb9b"
+      ]
+    },
+    {
+      "id": "prng-09",
+      "description": "1x1 degenerate grid (toroidal self-neighbor), 5 ticks",
+      "seed": { "kind": "prng", "w": 1, "h": 1, "value": 5 },
+      "ticks": 5,
+      "wormholes": true,
+      "sigma": 1.584962500721156,
+      "expected_trace_hash": "4c94485e0c21ae6c41ce1dfe7b6bfaceea5ab68e40a2476f50208e526f506080",
+      "tick_hashes": [
+        "8e35c2cd3bf6641bdb0e2050b76932cbb2e6034a0ddacc1d9bea82a6ba57f7cf",
+        "454349e422f05297191ead13e21d3db520e5abef52055e4964b82fb213f593a1",
+        "043a718774c572bd8a25adbeb1bfcd5c0256ae11cecf9f9c3f925d0e52beaf89",
+        "e3b98a4da31a127d4bde6e43033f66ba274cab0eb7eb1c70ec41402bf6273dd8",
+        "0bfe935e70c321c7ca3afc75ce0d0ca2f98b5422e008bb31c00c6d7f1f1c0ad6",
+        "4c94485e0c21ae6c41ce1dfe7b6bfaceea5ab68e40a2476f50208e526f506080"
+      ]
+    },
+    {
+      "id": "prng-10",
+      "description": "16x16, wormholes ON, 1 tick (single-step sanity case)",
+      "seed": { "kind": "prng", "w": 16, "h": 16, "value": 1 },
+      "ticks": 1,
+      "wormholes": true,
+      "sigma": 1.584962500721156,
+      "expected_trace_hash": "4953e6339d7f23149fc47268547c6fbe345d86ca0cb019a0d3a97d6c2ac3c9ec",
+      "tick_hashes": [
+        "be0c3a740455015c38a2943eb1d511501f674c8272eeb1fccd350651ab2270d0",
+        "4953e6339d7f23149fc47268547c6fbe345d86ca0cb019a0d3a97d6c2ac3c9ec"
+      ]
+    },
+    {
+      "id": "ring-smoke-04",
+      "description": "the armor-ring demo seed, wormholes ON, 4 ticks — the exact configuration behind the Looking Glass HUD smoke test (smoke.md finding c)",
+      "seed": { "kind": "ring", "w": 96, "h": 64 },
+      "ticks": 4,
+      "wormholes": true,
+      "sigma": 1.584962500721156,
+      "expected_trace_hash": "4f0a62ce5f0393eaa23bd46122b3912400b0d42cc27a93fb34515ff7c1cb66c1",
+      "tick_hashes": [
+        "145dcd649f764d86f74308d5338c1d42eb744e6bf2f724091d7edeb925744731",
+        "d32142952790b886bcea39fc1514ee65b65c62525412a3d12878cac2bb2a8477",
+        "cdd75ce671b64c4d42e6410342e66f4e6eaeb7c8267fce911f224ba0a5c785fc",
+        "30e8ed1611d60811ba42316f8004e8585501d9bfb949cbe2298d71ee5a575d9d",
+        "4f0a62ce5f0393eaa23bd46122b3912400b0d42cc27a93fb34515ff7c1cb66c1"
+      ]
+    },
+    {
+      "id": "ring-smoke-16",
+      "description": "the same armor-ring seed carried out to 16 ticks",
+      "seed": { "kind": "ring", "w": 96, "h": 64 },
+      "ticks": 16,
+      "wormholes": true,
+      "sigma": 1.584962500721156,
+      "expected_trace_hash": "9356bf08109a3554a657bfcc6e147eadda023321212d33cbfecb80e4a9235152",
+      "tick_hashes": [
+        "145dcd649f764d86f74308d5338c1d42eb744e6bf2f724091d7edeb925744731",
+        "d32142952790b886bcea39fc1514ee65b65c62525412a3d12878cac2bb2a8477",
+        "cdd75ce671b64c4d42e6410342e66f4e6eaeb7c8267fce911f224ba0a5c785fc",
+        "30e8ed1611d60811ba42316f8004e8585501d9bfb949cbe2298d71ee5a575d9d",
+        "4f0a62ce5f0393eaa23bd46122b3912400b0d42cc27a93fb34515ff7c1cb66c1",
+        "c85a828da68d0e5ab83c387f8d366e685c2d47dc947bf2f65480c8a0fd3ed76a",
+        "10bd615812b7c5da9cd202520523d5a240e3e7aa63fd75d2afc7d91493340f29",
+        "5bffaf74bfa05f74162ad27e321c403ba169e70de0ac59d0aa41575cbe1facd3",
+        "7cbebf8c300bb5c61aecc8de445756e87a04cabe6e2a4a567339181250665b34",
+        "cbe2f10b06be09a31aee8e0559ee9b33c5d43992851bab70670449258be19f5a",
+        "87c4e7bbf3f042c8544b2d581b62282ff5443118f4b9745cbe6c419856972125",
+        "d63d1987e514c2147421bcf9553d753dbc6debcec079b9d9b273d3b4e1977f9f",
+        "46c8208eea0aec3167d05354bfd352ff18a2c145ebcd8cdc6c9b0cd5f73f72f0",
+        "d7d6ad9be8fe801082424ce67de78fbbe9f75de2f8f96c23974543f7538c96cb",
+        "01f8cc7acbb93c46eb1745db454990a011b3de9aa4313573fd9af83c0a95087f",
+        "8532435e8ad7b04596ac552573f2bb23f289e8316e41bac145338eb1fca1f7e6",
+        "9356bf08109a3554a657bfcc6e147eadda023321212d33cbfecb80e4a9235152"
+      ]
+    }
+  ]
+}

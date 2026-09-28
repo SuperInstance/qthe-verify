@@ -1,0 +1,14 @@
+{
+  "name": "qthe-verify",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Independent, spec-only verifier for QTHE deterministic replay. Zero dependencies.",
+  "type": "module",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "verify": "node verify.mjs",
+    "self-test": "node verify.mjs --self-test"
+  },
+  "dependencies": {},
+  "license": "MIT"
+}
