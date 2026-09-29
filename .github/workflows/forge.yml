@@ -1,0 +1,7 @@
+name: forge
+on: [push, workflow_dispatch]
+jobs:
+  forge:
+    uses: SuperInstance/quilt-forge/.github/workflows/forge.yml@v0
+    with:
+      test-cmd: node verify.mjs
